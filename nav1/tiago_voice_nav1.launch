@@ -1,0 +1,12 @@
+<launch>
+
+  <node name="ann_recognizer" pkg="ann1vn" type="ann_recognizer.py">
+    <param name="test" value="$(find ann1vn)/nodes/test_files/test.wav"/>
+    <param name="ann1" value="$(find ann1vn)/nodes/network/command_mlp.npy"/>
+  </node>
+
+  <node name="voice_cmd_vel" pkg="ann1vn" type="voice_cmd_vel.py" output="screen">
+    <remap from="cmd_vel" to="/mobile_base_controller/cmd_vel"/>
+  </node>
+
+</launch>
