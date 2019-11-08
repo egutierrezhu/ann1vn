@@ -1,7 +1,6 @@
 from __future__ import division 
 import numpy as np 
 import scipy.io.wavfile as wav
-import os, glob
 
 from features import mfcc
 
