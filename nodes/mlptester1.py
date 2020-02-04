@@ -102,7 +102,7 @@ if __name__ == "__main__":
         words = ['backward','forward','go','left','right','stop']
 
         # MLP Network with 3 layers (in, hidden, out)
-        mlp_layers = (260,25,6)
+        mlp_layers = (260,200,6)
         print "Testing MLP " + str(mlp_layers)
 
         filename_ann1 = "network/command_mlp.npy"
