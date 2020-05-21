@@ -88,12 +88,12 @@ def feedToNetwork(words,inputArray,testNet):
 
         # op2:
         outn = outputArray[0]
-        thOut = {'backward': 0.8,
-                 'forward':  0.8,
-                 'go':       0.9,
-                 'left':     0.9,
-                 'right':    0.9,
-                 'stop':     0.7}
+        thOut = {'backward': 0.5,
+                 'forward':  0.5,
+                 'go':       0.4,
+                 'left':     0.5,
+                 'right':    0.5,
+                 'stop':     0.4}
         if outn[indexMax] > thOut[words[indexMax]]:
             return words[indexMax]
 
